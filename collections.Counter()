@@ -1,0 +1,15 @@
+from collections import Counter
+x = int(input())
+ls = list(map(int, input().split()))
+N = int(input())
+stock = Counter(ls)
+income = 0
+for _ in range(N):
+    size, price = list(map(int, input().split()))
+    if size in stock.keys():
+        if stock[size]:
+            income += price
+            stock[size] -= 1
+
+print(income)            
+
