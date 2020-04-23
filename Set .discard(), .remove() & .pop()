@@ -1,0 +1,15 @@
+n = int(input())
+s = set(map(int, input().split()))
+c = int(input())
+for i in range(c):
+    command = input()
+    if command=="pop":
+       s.pop()
+    else:
+       comman, value = command.split()
+       if comman=="remove":
+          s.remove(int(value))
+       if comman=="discard":
+          s.discard(int(value))
+          
+print(sum(s))          
