@@ -1,0 +1,7 @@
+# Enter your code here. 
+from collections import Counter
+
+k = input()
+lis = list(map(int, input().split()))
+
+print(Counter(lis).most_common()[-1][0])
